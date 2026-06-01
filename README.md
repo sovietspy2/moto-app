@@ -13,3 +13,8 @@ A simple HTML + JavaScript web app scaffold.
 
 1. Open `index.html` directly in your browser, or
 2. Run `npm start` and open `http://localhost:3000`
+
+
+## Tech
+
+- deployment: Cloudflare 
