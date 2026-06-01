@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moto App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <h1>Moto App</h1>
+        <p>An interactive JavaScript + HTML demo app.</p>
+      </header>
+
+      <section class="controls">
+        <div class="sensor-table-wrapper">
+          <strong>Device Orientation</strong>
+          <table class="sensor-table">
+            <thead>
+              <tr>
+                <th style="width: 33%">X</th>
+                <th style="width: 33%">Y</th>
+                <th style="width: 34%">Z</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="gyro-x">0</td>
+                <td id="gyro-y">0</td>
+                <td id="gyro-z">0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="quality-summary">
+          <strong>Road quality:</strong>
+          <span id="road-quality">0</span>
+        </div>
+
+        <div class="chart-wrapper">
+          <strong>Road quality trend</strong>
+          <canvas id="orientation-chart" width="720" height="260"></canvas>
+          <div class="chart-legend">
+            <span class="legend-item"><span class="legend-dot quality"></span> Road quality</span>
+          </div>
+        </div>
+
+        <button id="sensor-permission-button" class="permission-button hidden" type="button">
+          Enable orientation access
+        </button>
+        <p id="sensor-status" class="status"></p>
+      </section>
+
+      <section class="list-section">
+        <h2>Your moto list</h2>
+        <ul id="moto-list"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
